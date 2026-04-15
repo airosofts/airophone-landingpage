@@ -2,10 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: #F7F6F3;
+  color: #131210;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
+
+/* Scroll reveal */
+.rv { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.rv.on { opacity: 1; transform: translateY(0); }
+
+/* Hero entrance */
+@keyframes up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.anim-up { animation: up 0.7s ease both; }
+.anim-up-delay { animation: up 0.7s 0.15s ease both; }
+
+/* Blinking dot */
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+.blink { animation: blink 2s ease-in-out infinite; }
+
+/* Float animation */
+@keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.float { animation: floatY 4s ease-in-out infinite; }
+.float-delay { animation: floatY 4s 1s ease-in-out infinite; }
+
+/* Progress bar fill */
+@keyframes fpbar { to { width: 87%; } }
+.bar-fill { width: 0; animation: fpbar 1.5s 1s ease forwards; }

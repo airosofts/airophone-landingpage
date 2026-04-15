@@ -1,15 +1,17 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'AiroPhone - Powerful SMS & Voice Campaign Platform',
-  description: 'Reach thousands of customers instantly with bulk SMS campaigns, manage conversations, and track engagement - all from one intuitive platform.',
+  title: 'Airophone by Airosofts — Business Calls & Messaging, Automated',
+  description: 'Airophone gives your team a smart phone system — bulk SMS, VoIP calling, AI agent replies, campaign management, and a unified inbox. All in one platform.',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
       </head>
       <body>{children}</body>
     </html>
