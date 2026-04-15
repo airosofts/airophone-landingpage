@@ -156,7 +156,7 @@ export default function LandingPage() {
             className="px-4 py-[7px] rounded-[7px] text-[13px] font-medium no-underline text-text2 border border-border2 hover:bg-bg2 hover:text-text transition-all">
             Log in
           </a>
-          <a href="/signup"
+          <a href="https://app.airophone.com/signup"
             className="px-4 py-[7px] rounded-[7px] text-[13px] font-medium bg-red text-white no-underline cursor-pointer hover:opacity-90 transition-all">
             Try for free &rarr;
           </a>
@@ -177,7 +177,7 @@ export default function LandingPage() {
             </p>
 
             <div className="flex gap-2.5 flex-wrap">
-              <a href="/signup"
+              <a href="https://app.airophone.com/signup"
                 className="inline-flex items-center gap-2 bg-text text-white px-[22px] py-3 rounded-lg text-sm font-medium no-underline tracking-tight hover:bg-[#2a2928] hover:-translate-y-px hover:shadow-lg transition-all">
                 Try for free
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -371,7 +371,7 @@ export default function LandingPage() {
                 <div className="text-[26px] font-semibold leading-[1.2] text-white">Start free.<br/>Scale later.</div>
                 <div className="text-[11px] text-white/40 mt-2">No setup fees. No contracts.<br/>Full features on every plan.</div>
               </div>
-              <a href="/signup"
+              <a href="https://app.airophone.com/signup"
                 className="inline-flex items-center gap-2 bg-red text-white px-[18px] py-[11px] rounded-[7px] text-[13px] font-medium mt-6 no-underline hover:opacity-90 transition-opacity self-start">
                 Try for free &rarr;
               </a>
@@ -421,43 +421,92 @@ export default function LandingPage() {
               <h2 className="text-[clamp(28px,3.2vw,44px)] font-semibold tracking-[-0.035em] leading-[1.1] text-text">Simple, transparent<br/>pricing.</h2>
             </div>
             <p className="text-[15px] text-text2 leading-[1.65] max-w-[340px] font-light sm:text-right">
-              Pay only for what you use. Volume discounts applied automatically. No hidden fees.
+              Start free for 7 days. No setup fees. No contracts. Cancel anytime.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { tier:'Starter', price:'$0.03', range:'0 – 5,000 messages', note:'Perfect for getting started', highlight:false },
-              { tier:'Growth', price:'$0.025', range:'5,001 – 10,000 messages', note:'17% savings — most popular', highlight:true },
-              { tier:'Enterprise', price:'$0.02', range:'10,000+ messages', note:'33% savings for high volume', highlight:false },
-            ].map((p,i) => (
-              <div key={i} className={`rounded-xl p-8 border relative ${p.highlight ? 'bg-text text-white border-text' : 'bg-surface border-border'}`}>
+              {
+                tier: 'Starter', price: 9, credits: '200', overage: '$0.04',
+                desc: 'Perfect for small teams just getting started.',
+                features: ['200 credits / month', 'All features included', 'Unified inbox & AI scenarios', 'Phone number provisioning', '24/7 support & analytics'],
+                highlight: false,
+              },
+              {
+                tier: 'Growth', price: 29, credits: '500', overage: '$0.03',
+                desc: 'The sweet spot for growing businesses.',
+                features: ['500 credits / month', 'Unlimited calling', 'All features included', 'Unified inbox & AI scenarios', 'Phone number provisioning', '24/7 support & analytics'],
+                highlight: true,
+              },
+              {
+                tier: 'Enterprise', price: 59, credits: '1,000', overage: '$0.02',
+                desc: 'Full power for high-volume operations.',
+                features: ['1,000 credits / month', 'Unlimited calling', 'All features included', 'Unified inbox & AI scenarios', 'Phone number provisioning', '24/7 support & analytics'],
+                highlight: false,
+              },
+            ].map((p, i) => (
+              <div key={i} className={`rounded-[14px] p-7 border relative flex flex-col ${p.highlight ? 'bg-text text-white border-text' : 'bg-surface border-border'}`}>
                 {p.highlight && (
-                  <div className="absolute top-0 left-0 right-0 bg-red text-white text-center py-1.5 text-[10px] font-mono tracking-widest uppercase rounded-t-xl">Most popular</div>
+                  <div className="absolute -top-px left-1/2 -translate-x-1/2 bg-red text-white text-center py-1 px-3 text-[9px] font-mono font-semibold tracking-widest uppercase rounded-b-lg">Most popular</div>
                 )}
-                <div className={p.highlight ? 'pt-6' : ''}>
-                  <div className={`font-mono text-[10px] tracking-widest uppercase mb-4 ${p.highlight ? 'text-white/40' : 'text-text3'}`}>{p.tier}</div>
-                  <div className={`text-4xl font-semibold tracking-[-0.04em] mb-1 ${p.highlight ? 'text-white' : 'text-text'}`}>{p.price}</div>
-                  <div className={`text-[13px] mb-2 ${p.highlight ? 'text-white/60' : 'text-text3'}`}>per message</div>
-                  <div className={`text-sm mb-6 ${p.highlight ? 'text-white/50' : 'text-text2'}`}>{p.note}</div>
-                  <div className={`font-mono text-[11px] mb-6 ${p.highlight ? 'text-white/40' : 'text-text3'}`}>{p.range}</div>
-                  {['All features included','Unified inbox & AI scenarios','Phone number provisioning','24/7 support & analytics'].map((f,j) => (
-                    <div key={j} className={`flex items-center gap-2 py-1.5 text-[13px] font-light ${p.highlight ? 'text-white/70' : 'text-text2'}`}>
-                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke={p.highlight ? '#fff' : '#22c55e'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      {f}
-                    </div>
-                  ))}
-                  <a href="/signup"
-                    className={`w-full mt-6 px-5 py-3 rounded-lg text-sm font-medium no-underline text-center block transition-all ${
+                <div className={p.highlight ? 'pt-4' : ''}>
+                  {/* Plan name */}
+                  <div className={`text-base font-semibold tracking-[-0.02em] mb-4 ${p.highlight ? 'text-white' : 'text-text'}`}>{p.tier}</div>
+
+                  {/* Price */}
+                  <div className="flex items-baseline gap-1 mb-1">
+                    <span className={`text-[36px] font-semibold tracking-[-0.04em] leading-none ${p.highlight ? 'text-white' : 'text-text'}`}>${p.price}</span>
+                    <span className={`text-[13px] ${p.highlight ? 'text-white/50' : 'text-text3'}`}>/month</span>
+                  </div>
+                  <div className={`text-xs mb-4 ${p.highlight ? 'text-white/40' : 'text-text3'}`}>
+                    {p.credits} credits included
+                  </div>
+
+                  {/* Description */}
+                  <div className={`text-[13px] font-light mb-5 ${p.highlight ? 'text-white/50' : 'text-text2'}`}>{p.desc}</div>
+
+                  {/* Divider */}
+                  <div className={`h-px mb-5 ${p.highlight ? 'bg-white/10' : 'bg-border'}`} />
+
+                  {/* Features */}
+                  <div className="flex flex-col gap-2.5 flex-1">
+                    {p.features.map((f, j) => (
+                      <div key={j} className={`flex items-start gap-2 text-[12.5px] font-light leading-[1.4] ${p.highlight ? 'text-white/70' : 'text-text2'}`}>
+                        <div className={`w-4 h-4 rounded-full shrink-0 mt-0.5 flex items-center justify-center ${p.highlight ? 'bg-white/20' : 'bg-bg2'}`}>
+                          <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+                            <path d="M2 5l2 2 4-4" stroke={p.highlight ? '#fff' : '#9B9890'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        {f}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Overage */}
+                  <div className={`font-mono text-[11px] mt-4 ${p.highlight ? 'text-white/30' : 'text-text3'}`}>
+                    {p.overage}/extra credit
+                  </div>
+
+                  {/* CTA */}
+                  <a href="https://app.airophone.com/signup"
+                    className={`w-full mt-5 px-5 py-3 rounded-[9px] text-sm font-medium no-underline text-center block transition-all ${
                       p.highlight
                         ? 'bg-red text-white hover:opacity-90'
                         : 'bg-bg hover:bg-bg2 text-text border border-border'
                     }`}>
-                    Try for free &rarr;
+                    Start 7-day free trial &rarr;
                   </a>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Trial note */}
+          <div className="mt-6 text-center">
+            <p className="text-[13px] text-text3 font-light">
+              7-day free trial on all plans. Your card will not be charged until the trial ends.
+            </p>
           </div>
         </RevealSection>
       </section>
@@ -474,7 +523,7 @@ export default function LandingPage() {
               </p>
             </div>
             <div className="flex flex-col gap-2.5 flex-shrink-0">
-              <a href="/signup"
+              <a href="https://app.airophone.com/signup"
                 className="inline-flex items-center gap-2 bg-text text-white px-6 py-3.5 rounded-[9px] text-sm font-medium no-underline hover:bg-[#2a2928] hover:-translate-y-px hover:shadow-lg transition-all">
                 Try for free
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>

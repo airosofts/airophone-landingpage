@@ -293,7 +293,7 @@ export default function PricingPage() {
             <Link href="/#how-it-works" className="hover:text-text transition-colors">How it works</Link>
           </div>
           <Link
-            href="/signup"
+            href="https://app.airophone.com/signup"
             className="bg-text text-white rounded-lg px-5 py-2.5 text-sm font-medium hover:opacity-85 transition-opacity"
           >
             Get started
@@ -384,7 +384,7 @@ export default function PricingPage() {
               </ul>
 
               <Link
-                href="/signup"
+                href="https://app.airophone.com/signup"
                 className={`block text-center rounded-lg px-5 py-2.5 text-sm font-medium transition-opacity ${
                   plan.popular
                     ? 'bg-red text-white hover:opacity-85'
@@ -570,7 +570,7 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
-              href="/signup"
+              href="https://app.airophone.com/signup"
               className="bg-text text-white rounded-lg px-6 py-3 text-sm font-medium hover:opacity-85 transition-opacity"
             >
               Start free trial
