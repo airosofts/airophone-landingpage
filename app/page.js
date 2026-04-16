@@ -144,7 +144,7 @@ export default function LandingPage() {
       <nav className="sticky top-0 z-[200] h-14 flex items-center justify-between px-6 sm:px-10 bg-bg/[0.88] backdrop-blur-lg border-b border-border">
         <a href="#" className="flex items-center gap-2.5 no-underline text-text text-[15px] font-semibold tracking-tight">
           <Logo size={24} />
-          airophone
+          AiroPhone
         </a>
         <ul className="hidden md:flex gap-7 list-none">
           {['Features','Pricing'].map(l => (
@@ -196,11 +196,7 @@ export default function LandingPage() {
               ].map((s,i) => (
                 <div key={i}>
                   <div className="text-[26px] font-semibold tracking-[-0.04em]">
-                    {s.n.replace(/([%+s])/g, '').split('').map((c,j) => <span key={j}>{c}</span>)}
-                    <span className="text-red">{s.n.match(/[%+s<]/g)?.[0] === '<' ? '' : s.n.match(/[%+s]/)?.[0]}</span>
-                    {s.n.includes('+') && <span className="text-red">+</span>}
-                    {s.n.includes('%') && <span className="text-red">%</span>}
-                    {s.n.includes('s') && !s.n.includes('ss') && s.n.endsWith('s') && <span className="text-red">s</span>}
+                    {s.n.replace(/[%+s]/g, '')}<span className="text-red">{s.n.match(/[%+s]$/)?.[0] || ''}</span>
                   </div>
                   <div className="font-mono text-[11px] text-text3 tracking-widest uppercase mt-[3px]">{s.l}</div>
                 </div>
@@ -219,7 +215,7 @@ export default function LandingPage() {
               <div className="bg-bg h-[calc(100%-28px)] flex flex-col">
                 {/* Top bar */}
                 <div className="flex items-center justify-between px-4 pt-3 pb-2 bg-surface border-b border-border">
-                  <span className="text-[13px] font-semibold tracking-tight">airophone</span>
+                  <span className="text-[13px] font-semibold tracking-tight">AiroPhone</span>
                   <span className="font-mono text-[9px] text-text3">&bull; ACTIVE &middot; 3 LINES</span>
                 </div>
                 {/* Call card */}
@@ -541,7 +537,7 @@ export default function LandingPage() {
       <footer className="border-t border-border px-6 sm:px-10 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-[13.5px] font-medium text-text2">
           <Logo size={22} />
-          airophone by airosofts
+          AiroPhone by Airosofts
         </div>
         <ul className="flex gap-6 list-none">
           <li><a href="#features" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Features</a></li>

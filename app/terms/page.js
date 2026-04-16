@@ -29,7 +29,7 @@ export default function TermsPage() {
         backdropFilter: 'blur(16px)', borderBottom: '1px solid #E3E1DB',
       }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: '#131210', fontSize: 15, fontWeight: 600, letterSpacing: '-0.02em' }}>
-          <Logo /> airophone
+          <Logo /> AiroPhone
         </Link>
         <Link href="/login" style={{ padding: '7px 16px', borderRadius: 7, fontSize: 13, fontWeight: 500, textDecoration: 'none', color: '#5C5A55', border: '1px solid #D4D1C9' }}>
           Log in
@@ -141,7 +141,7 @@ export default function TermsPage() {
       {/* Footer */}
       <footer style={{ borderTop: '1px solid #E3E1DB', padding: '24px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '13.5px', fontWeight: 500, color: '#5C5A55' }}>
-          <Logo /> airophone by airosofts
+          <Logo /> AiroPhone by airosofts
         </div>
         <div style={{ display: 'flex', gap: 24 }}>
           <Link href="/terms" style={{ fontSize: 13, color: '#9B9890', textDecoration: 'none' }}>Terms</Link>
