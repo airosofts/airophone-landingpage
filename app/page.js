@@ -544,6 +544,7 @@ export default function LandingPage() {
           <li><a href="#pricing" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Pricing</a></li>
           <li><a href="/terms" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Terms</a></li>
           <li><a href="/privacy" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Privacy</a></li>
+          <li><a href="/fair-use" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Fair Use</a></li>
         </ul>
         <div className="font-mono text-[11px] text-text3 tracking-wide">&copy; 2025 AIROSOFTS LLC</div>
       </footer>
