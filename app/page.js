@@ -153,11 +153,11 @@ export default function LandingPage() {
         </ul>
         <div className="flex gap-2 items-center">
           <a href="https://app.airophone.com/login"
-            className="px-4 py-[7px] rounded-[7px] text-[13px] font-medium no-underline text-text2 border border-border2 hover:bg-bg2 hover:text-text transition-all">
+            className="hidden sm:inline-flex px-4 py-[7px] rounded-[7px] text-[13px] font-medium no-underline text-text2 border border-border2 hover:bg-bg2 hover:text-text transition-all">
             Log in
           </a>
           <a href="https://app.airophone.com/signup"
-            className="px-4 py-[7px] rounded-[7px] text-[13px] font-medium bg-red text-white no-underline cursor-pointer hover:opacity-90 transition-all">
+            className="px-3 sm:px-4 py-[7px] rounded-[7px] text-[12px] sm:text-[13px] font-medium bg-red text-white no-underline cursor-pointer hover:opacity-90 transition-all">
             Try for free &rarr;
           </a>
         </div>
@@ -165,15 +165,15 @@ export default function LandingPage() {
 
       {/* ── HERO ── */}
       <section className="pt-0">
-        <div className="max-w-[1280px] mx-auto px-6 sm:px-10 py-20 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center min-h-[calc(100vh-56px)]">
+        <div className="max-w-[1280px] mx-auto px-5 sm:px-10 py-12 sm:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 items-center lg:min-h-[calc(100vh-56px)]">
           {/* Left */}
           <div className="anim-up">
-            <h1 className="text-[clamp(38px,4.2vw,60px)] font-semibold leading-[1.06] tracking-[-0.04em] text-text mb-5">
+            <h1 className="text-[clamp(32px,4.2vw,60px)] font-semibold leading-[1.06] tracking-[-0.04em] text-text mb-5">
               Business calls &amp;<br/>messaging, <span className="inline-block bg-gradient-to-br from-red to-[#F06040] bg-clip-text text-transparent">automated.</span>
             </h1>
 
             <p className="text-base leading-[1.7] text-text2 max-w-[420px] mb-9 font-light">
-              Airophone gives your team a smart phone system &mdash; bulk SMS, VoIP calling, AI scenarios, a unified inbox, and campaign management. All in one platform.
+              AiroPhone gives your team a smart phone system &mdash; bulk SMS, VoIP calling, AI scenarios, a unified inbox, and campaign management. All in one platform.
             </p>
 
             <div className="flex gap-2.5 flex-wrap">
@@ -188,25 +188,25 @@ export default function LandingPage() {
               </a>
             </div>
 
-            <div className="flex gap-8 mt-12 pt-8 border-t border-border">
+            <div className="flex gap-5 sm:gap-8 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               {[
                 { n:'50k+', l:'Messages / day' },
                 { n:'99%', l:'Delivery rate' },
                 { n:'<1s', l:'AI response' },
               ].map((s,i) => (
                 <div key={i}>
-                  <div className="text-[26px] font-semibold tracking-[-0.04em]">
+                  <div className="text-[22px] sm:text-[26px] font-semibold tracking-[-0.04em]">
                     {s.n.replace(/[%+s]/g, '')}<span className="text-red">{s.n.match(/[%+s]$/)?.[0] || ''}</span>
                   </div>
-                  <div className="font-mono text-[11px] text-text3 tracking-widest uppercase mt-[3px]">{s.l}</div>
+                  <div className="font-mono text-[9px] sm:text-[11px] text-text3 tracking-widest uppercase mt-[3px]">{s.l}</div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Right — Phone Mockup */}
-          <div className="anim-up-delay relative flex justify-center">
-            <div className="w-[260px] h-[520px] bg-surface border border-border rounded-[40px] overflow-hidden shadow-[0_2px_60px_rgba(19,18,16,0.08),0_1px_4px_rgba(19,18,16,0.04)] relative flex-shrink-0">
+          <div className="anim-up-delay relative flex flex-col items-center overflow-visible">
+            <div className="w-[240px] sm:w-[260px] h-[480px] sm:h-[520px] bg-surface border border-border rounded-[36px] sm:rounded-[40px] overflow-hidden shadow-[0_2px_60px_rgba(19,18,16,0.08),0_1px_4px_rgba(19,18,16,0.04)] relative flex-shrink-0">
               {/* Notch */}
               <div className="h-7 bg-bg flex items-center justify-center border-b border-border">
                 <div className="w-[60px] h-[5px] bg-border2 rounded-[3px]" />
@@ -260,22 +260,23 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Floating cards */}
-            <div className="absolute right-0 lg:-right-[30px] top-[60px] bg-surface border border-border rounded-xl px-4 py-3.5 min-w-[160px] shadow-[0_8px_32px_rgba(19,18,16,0.10)] float hidden sm:block">
-              <div className="font-mono text-[9px] text-text3 tracking-widest uppercase mb-1.5">Delivered today</div>
-              <div className="text-xl font-semibold tracking-tight text-text">12,840</div>
-              <div className="text-[11px] text-text3 mt-0.5">SMS across 4 campaigns</div>
-              <div className="h-[3px] bg-border rounded-sm mt-2.5 overflow-hidden">
+            {/* Floating card — top right */}
+            <div className="absolute -right-2 top-1 sm:right-0 sm:top-[60px] lg:-right-[30px] bg-surface border border-border rounded-lg sm:rounded-xl px-2.5 py-2 sm:px-4 sm:py-3.5 shadow-[0_4px_16px_rgba(19,18,16,0.08)] sm:shadow-[0_8px_32px_rgba(19,18,16,0.10)] float z-10">
+              <div className="font-mono text-[7px] sm:text-[9px] text-text3 tracking-widest uppercase mb-0.5 sm:mb-1.5">Delivered</div>
+              <div className="text-[15px] sm:text-xl font-semibold tracking-tight text-text leading-none">12,840</div>
+              <div className="text-[8px] sm:text-[11px] text-text3 mt-0.5">4 campaigns</div>
+              <div className="h-[2px] sm:h-[3px] bg-border rounded-sm mt-1.5 sm:mt-2.5 overflow-hidden">
                 <div className="h-full bg-red rounded-sm bar-fill" />
               </div>
             </div>
 
-            <div className="absolute left-0 lg:-left-[20px] bottom-[80px] bg-surface border border-border rounded-xl px-3.5 py-3 min-w-[150px] shadow-[0_8px_32px_rgba(19,18,16,0.08)] float-delay hidden sm:block">
-              <div className="flex items-center gap-2 mb-1">
-                <div className="w-[7px] h-[7px] rounded-full bg-green-500 flex-shrink-0" />
-                <span className="font-mono text-[10px] text-text2">AI agent active</span>
+            {/* Floating card — bottom left */}
+            <div className="absolute -left-2 -bottom-12 sm:left-0 sm:bottom-[80px] lg:-left-[20px] bg-surface border border-border rounded-lg sm:rounded-xl px-2.5 py-2 sm:px-3.5 sm:py-3 shadow-[0_4px_16px_rgba(19,18,16,0.08)] sm:shadow-[0_8px_32px_rgba(19,18,16,0.08)] float-delay z-10">
+              <div className="flex items-center gap-1 sm:gap-2 mb-0.5 sm:mb-1">
+                <div className="w-1.5 h-1.5 sm:w-[7px] sm:h-[7px] rounded-full bg-green-500 flex-shrink-0" />
+                <span className="font-mono text-[8px] sm:text-[10px] text-text2">AI active</span>
               </div>
-              <div className="text-[11px] text-text3 pl-[15px]">83 replies handled &middot; 0 missed</div>
+              <div className="text-[9px] sm:text-[11px] text-text3 pl-2.5 sm:pl-[15px]">83 replies &middot; 0 missed</div>
             </div>
           </div>
         </div>
@@ -515,7 +516,7 @@ export default function LandingPage() {
               <div className="font-mono text-[11px] text-red tracking-[0.12em] uppercase mb-3.5">Get Started</div>
               <div className="text-[clamp(24px,2.8vw,38px)] font-semibold tracking-[-0.03em] leading-[1.15] text-text">Your business phone,<br/>finally automated.</div>
               <p className="text-sm text-text2 leading-[1.7] mt-3 max-w-[380px] font-light">
-                Join thousands of teams using Airophone to call smarter, message faster, and let AI handle the rest.
+                Join thousands of teams using AiroPhone to call smarter, message faster, and let AI handle the rest.
               </p>
             </div>
             <div className="flex flex-col gap-2.5 flex-shrink-0">
