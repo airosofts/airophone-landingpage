@@ -261,7 +261,7 @@ export default function LandingPage() {
             </div>
 
             {/* Floating card — top right */}
-            <div className="absolute -right-2 top-1 sm:-right-3 sm:top-10 lg:-right-8 lg:top-14 bg-surface border border-border rounded-lg sm:rounded-xl px-2.5 py-2 sm:px-4 sm:py-3.5 shadow-[0_4px_16px_rgba(19,18,16,0.08)] sm:shadow-[0_8px_32px_rgba(19,18,16,0.10)] float z-10">
+            <div className="absolute -right-2 top-1 sm:right-[-60px] sm:top-4 lg:right-[-80px] lg:top-6 bg-surface border border-border rounded-lg sm:rounded-xl px-2.5 py-2 sm:px-4 sm:py-3.5 min-w-[140px] sm:min-w-[160px] shadow-[0_4px_16px_rgba(19,18,16,0.08)] sm:shadow-[0_8px_32px_rgba(19,18,16,0.10)] float z-10">
               <div className="font-mono text-[7px] sm:text-[9px] text-text3 tracking-widest uppercase mb-0.5 sm:mb-1.5">Delivered</div>
               <div className="text-[15px] sm:text-xl font-semibold tracking-tight text-text leading-none">12,840</div>
               <div className="text-[8px] sm:text-[11px] text-text3 mt-0.5">4 campaigns</div>
