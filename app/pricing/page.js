@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Footer from '../components/Footer'
+import Nav from '../components/Nav'
 
 /* ── SVG LOGO ── */
 function Logo({ size = 24 }) {
@@ -105,7 +107,7 @@ const faqs = [
   },
   {
     q: 'How does the 7-day free trial work?',
-    a: 'Sign up and get full access to your chosen plan for 7 days at no cost. No credit card is required to start. At the end of the trial you can add a payment method to continue, or your account simply pauses with no charges.',
+    a: 'Sign up and get full access to your chosen plan for 7 days. At the end of the trial your plan activates automatically. You can cancel anytime from your billing settings.',
   },
   {
     q: 'Can I change plans later?',
@@ -280,26 +282,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-bg font-sans">
 
-      {/* NAV */}
-      <nav className="sticky top-0 z-50 bg-bg/90 backdrop-blur-md border-b border-border">
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <Logo size={28} />
-            <span className="font-semibold text-[15px] text-text tracking-tight">AiroPhone</span>
-          </Link>
-          <div className="hidden sm:flex items-center gap-6 text-sm text-text2">
-            <Link href="/#features" className="hover:text-text transition-colors">Features</Link>
-            <Link href="/pricing" className="text-text font-medium">Pricing</Link>
-            <Link href="/#how-it-works" className="hover:text-text transition-colors">How it works</Link>
-          </div>
-          <Link
-            href="https://app.airophone.com/signup"
-            className="bg-text text-white rounded-lg px-5 py-2.5 text-sm font-medium hover:opacity-85 transition-opacity"
-          >
-            Get started
-          </Link>
-        </div>
-      </nav>
+      <Nav />
 
       {/* HERO */}
       <section className="py-20 px-6 text-center">
@@ -323,7 +306,7 @@ export default function PricingPage() {
               <path d="M5.5 9l2.5 2.5 4.5-5" stroke="#16a34a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <p className="text-sm font-medium text-[#15803d]">
-              7-day free trial on all plans — no credit card required to start
+              7-day free trial on all plans — cancel anytime
             </p>
           </div>
         </div>
@@ -566,7 +549,7 @@ export default function PricingPage() {
             Start your free trial today
           </h2>
           <p className="text-text2 text-sm leading-relaxed mb-8 max-w-sm mx-auto">
-            No credit card required. Full access for 7 days. Set up in under 5 minutes.
+            Full access for 7 days. Set up in under 5 minutes. Cancel anytime.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -583,28 +566,12 @@ export default function PricingPage() {
             </Link>
           </div>
           <p className="text-[11px] text-text3 mt-5 font-mono">
-            No credit card required — cancel anytime
+            Cancel anytime
           </p>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-border py-10 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2">
-            <Logo size={22} />
-            <span className="text-sm font-semibold text-text">AiroPhone</span>
-          </Link>
-          <div className="flex items-center gap-5 text-sm text-text3">
-            <Link href="/privacy" className="hover:text-text2 transition-colors">Privacy</Link>
-            <Link href="/terms" className="hover:text-text2 transition-colors">Terms</Link>
-            <Link href="/pricing" className="hover:text-text2 transition-colors">Pricing</Link>
-          </div>
-          <p className="text-xs text-text3 font-mono">
-            &copy; {new Date().getFullYear()} AiroPhone
-          </p>
-        </div>
-      </footer>
+      <Footer />
 
     </div>
   )

@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Footer from './components/Footer'
+import Nav from './components/Nav'
 
 /* ── SVG LOGO ── */
 function Logo({ size = 24 }) {
@@ -140,28 +142,7 @@ export default function LandingPage() {
     <div className="min-h-screen">
       <ContactModal open={showForm} onClose={() => setShowForm(false)} />
 
-      {/* ── NAV ── */}
-      <nav className="sticky top-0 z-[200] h-14 flex items-center justify-between px-6 sm:px-10 bg-bg/[0.88] backdrop-blur-lg border-b border-border">
-        <a href="#" className="flex items-center gap-2.5 no-underline text-text text-[15px] font-semibold tracking-tight">
-          <Logo size={24} />
-          AiroPhone
-        </a>
-        <ul className="hidden md:flex gap-7 list-none">
-          {['Features','Pricing'].map(l => (
-            <li key={l}><a href={`#${l.toLowerCase()}`} className="no-underline text-text2 text-[13.5px] hover:text-text transition-colors">{l}</a></li>
-          ))}
-        </ul>
-        <div className="flex gap-2 items-center">
-          <a href="https://app.airophone.com/login"
-            className="hidden sm:inline-flex px-4 py-[7px] rounded-[7px] text-[13px] font-medium no-underline text-text2 border border-border2 hover:bg-bg2 hover:text-text transition-all">
-            Log in
-          </a>
-          <a href="https://app.airophone.com/signup"
-            className="px-3 sm:px-4 py-[7px] rounded-[7px] text-[12px] sm:text-[13px] font-medium bg-red text-white no-underline cursor-pointer hover:opacity-90 transition-all">
-            Try for free &rarr;
-          </a>
-        </div>
-      </nav>
+      <Nav />
 
       {/* ── HERO ── */}
       <section className="pt-0">
@@ -534,21 +515,7 @@ export default function LandingPage() {
         </RevealSection>
       </div>
 
-      {/* ── FOOTER ── */}
-      <footer className="border-t border-border px-6 sm:px-10 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2 text-[13.5px] font-medium text-text2">
-          <Logo size={22} />
-          AiroPhone by Airosofts
-        </div>
-        <ul className="flex gap-6 list-none">
-          <li><a href="#features" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Features</a></li>
-          <li><a href="#pricing" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Pricing</a></li>
-          <li><a href="/terms" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Terms</a></li>
-          <li><a href="/privacy" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Privacy</a></li>
-          <li><a href="/fair-use" className="text-[13px] text-text3 no-underline hover:text-text2 transition-colors">Fair Use</a></li>
-        </ul>
-        <div className="font-mono text-[11px] text-text3 tracking-wide">&copy; 2025 AIROSOFTS LLC</div>
-      </footer>
+      <Footer />
     </div>
   )
 }

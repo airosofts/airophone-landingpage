@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Footer from '../components/Footer'
+import Nav from '../components/Nav'
 
 function Logo() {
   return (
@@ -27,20 +29,7 @@ export default function PrivacyPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#F7F6F3', fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
-      {/* Nav */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 200, height: 56,
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '0 40px', background: 'rgba(247,246,243,0.88)',
-        backdropFilter: 'blur(16px)', borderBottom: '1px solid #E3E1DB',
-      }}>
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: '#131210', fontSize: 15, fontWeight: 600, letterSpacing: '-0.02em' }}>
-          <Logo /> AiroPhone
-        </Link>
-        <Link href="https://app.airophone.com/login" style={{ padding: '7px 16px', borderRadius: 7, fontSize: 13, fontWeight: 500, textDecoration: 'none', color: '#5C5A55', border: '1px solid #D4D1C9' }}>
-          Log in
-        </Link>
-      </nav>
+      <Nav />
 
       {/* Content */}
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '60px 24px 100px' }}>
@@ -120,7 +109,7 @@ export default function PrivacyPage() {
           <h3 style={S.h3}>Communication Data</h3>
           <ul style={{ paddingLeft: 20, marginBottom: 14 }}>
             <li style={S.li}>SMS messages sent and received through the platform</li>
-            <li style={S.li}>Call logs and call recordings (when enabled)</li>
+            <li style={S.li}>Call logs and metadata</li>
             <li style={S.li}>AI scenario configurations and auto-reply content</li>
           </ul>
           <p style={S.p}><em>Shared with:</em> Service Providers (Telnyx for telecommunications)</p>
@@ -157,11 +146,6 @@ export default function PrivacyPage() {
           </ul>
           <p style={S.p}><em>Shared with:</em> Service Providers, Analytics Partners</p>
 
-          <h3 style={S.h3}>Recordings</h3>
-          <ul style={{ paddingLeft: 20, marginBottom: 14 }}>
-            <li style={S.li}>Recordings of phone calls (when call recording is enabled by you)</li>
-          </ul>
-          <p style={S.p}><em>Shared with:</em> Service Providers</p>
 
           <h3 style={S.h3}>Geolocation Data</h3>
           <ul style={{ paddingLeft: 20, marginBottom: 14 }}>
@@ -346,18 +330,7 @@ export default function PrivacyPage() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer style={{ borderTop: '1px solid #E3E1DB', padding: '24px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '13.5px', fontWeight: 500, color: '#5C5A55' }}>
-          <Logo /> AiroPhone by Airosofts
-        </div>
-        <div style={{ display: 'flex', gap: 24 }}>
-          <Link href="/terms" style={{ fontSize: 13, color: '#9B9890', textDecoration: 'none' }}>Terms</Link>
-          <Link href="/privacy" style={{ fontSize: 13, color: '#9B9890', textDecoration: 'none' }}>Privacy</Link>
-          <Link href="/fair-use" style={{ fontSize: 13, color: '#9B9890', textDecoration: 'none' }}>Fair Use</Link>
-        </div>
-        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#9B9890' }}>&copy; 2025 AIROSOFTS LLC</div>
-      </footer>
+      <Footer />
     </div>
   )
 }

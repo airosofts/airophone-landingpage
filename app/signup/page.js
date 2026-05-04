@@ -81,7 +81,7 @@ export default function SignupPage() {
             fontSize: 14, color: '#5C5A55', lineHeight: 1.72,
             maxWidth: 340, fontWeight: 300, marginBottom: 32,
           }}>
-            Get started in minutes. No credit card required. Full access to every feature on your free trial.
+            Get started in minutes. Full access to every feature on your free trial.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 44 }}>
