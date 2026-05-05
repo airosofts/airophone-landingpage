@@ -466,6 +466,11 @@ export default function LandingPage() {
                     {p.overage}/extra credit
                   </div>
 
+                  {/* Credit explanation */}
+                  <div className={`mt-2.5 px-3 py-2 rounded-lg text-[11px] leading-snug ${p.highlight ? 'bg-white/10 text-white/70' : 'bg-bg2 text-text3'}`}>
+                    <span className={`font-semibold ${p.highlight ? 'text-white/90' : 'text-text2'}`}>1 credit</span> = 1 SMS · 1 min call · ½ AI reply
+                  </div>
+
                   {/* CTA */}
                   <a href="https://app.airophone.com/signup"
                     className={`w-full mt-5 px-5 py-3 rounded-[9px] text-sm font-medium no-underline text-center block transition-all ${

@@ -350,6 +350,12 @@ export default function PricingPage() {
                 <p className="text-[11px] text-text3">
                   then ${plan.extraRate.toFixed(2)} per extra credit
                 </p>
+                <div className="mt-2 pt-2 border-t border-border flex items-center gap-1.5 flex-wrap">
+                  <span className="text-[10px] text-text3 font-medium">1 credit =</span>
+                  <span className="text-[10px] bg-white border border-border text-text2 px-1.5 py-0.5 rounded-md font-medium">1 SMS</span>
+                  <span className="text-[10px] bg-white border border-border text-text2 px-1.5 py-0.5 rounded-md font-medium">1 min call</span>
+                  <span className="text-[10px] bg-white border border-border text-text2 px-1.5 py-0.5 rounded-md font-medium">½ AI reply</span>
+                </div>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
@@ -378,6 +384,20 @@ export default function PricingPage() {
               </Link>
             </div>
           ))}
+        </div>
+
+        {/* Scroll nudge — directs users to the calculator below */}
+        <div className="max-w-5xl mx-auto mt-8 text-center">
+          <a
+            href="#estimator"
+            className="inline-flex items-center gap-2 text-[12.5px] text-text2 hover:text-text transition-colors"
+          >
+            <span>Not sure how many credits you need?</span>
+            <span className="font-medium text-red underline underline-offset-2">Use the calculator below</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D63B1F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </a>
         </div>
       </section>
 
@@ -449,7 +469,7 @@ export default function PricingPage() {
       </section>
 
       {/* COST ESTIMATOR */}
-      <section className="py-20 px-6 border-t border-border">
+      <section id="estimator" className="py-20 px-6 border-t border-border">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="font-mono text-[11px] text-red tracking-widest uppercase mb-3">Estimator</p>
