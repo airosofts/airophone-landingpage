@@ -408,7 +408,7 @@ export default function LandingPage() {
               {
                 tier: 'Starter', price: 9, credits: '200', overage: '$0.04',
                 desc: 'Perfect for small teams just getting started.',
-                features: ['200 credits / month', 'All features included', 'Unified inbox & AI scenarios', 'Phone number provisioning', '24/7 support & analytics'],
+                features: ['200 credits / month', 'Unlimited calling', 'All features included', 'Unified inbox & AI scenarios', 'Phone number provisioning', '24/7 support & analytics'],
                 highlight: false,
               },
               {
@@ -468,7 +468,7 @@ export default function LandingPage() {
 
                   {/* Credit explanation */}
                   <div className={`mt-2.5 px-3 py-2 rounded-lg text-[11px] leading-snug ${p.highlight ? 'bg-white/10 text-white/70' : 'bg-bg2 text-text3'}`}>
-                    <span className={`font-semibold ${p.highlight ? 'text-white/90' : 'text-text2'}`}>1 credit</span> = 1 SMS · 1 min call · ½ AI reply
+                    <span className={`font-semibold ${p.highlight ? 'text-white/90' : 'text-text2'}`}>1 credit</span> = 1 SMS · ½ AI reply · calls unlimited
                   </div>
 
                   {/* CTA */}

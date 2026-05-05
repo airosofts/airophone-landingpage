@@ -61,7 +61,7 @@ const plans = [
       { label: 'Unified inbox & AI scenarios', included: true },
       { label: 'Phone number provisioning', included: true },
       { label: '24/7 support & analytics', included: true },
-      { label: 'Unlimited calling', included: false },
+      { label: 'Unlimited calling', included: true },
       { label: 'Priority support', included: false },
     ],
   },
@@ -115,7 +115,7 @@ const faqs = [
   },
   {
     q: 'What counts as one credit?',
-    a: '1 SMS segment = 1 credit. 1 minute of a phone call = 1 credit. 1 AI-generated reply = 2 credits. MMS messages count as 3 credits. Credits are consumed as activity happens, and your dashboard shows real-time usage.',
+    a: '1 SMS segment = 1 credit. 1 AI-generated reply = 2 credits. MMS messages count as 3 credits. Calls are unlimited and do not consume credits. Credits are consumed as activity happens, and your dashboard shows real-time usage.',
   },
   {
     q: 'Is there a contract or cancellation fee?',
@@ -353,8 +353,8 @@ export default function PricingPage() {
                 <div className="mt-2 pt-2 border-t border-border flex items-center gap-1.5 flex-wrap">
                   <span className="text-[10px] text-text3 font-medium">1 credit =</span>
                   <span className="text-[10px] bg-white border border-border text-text2 px-1.5 py-0.5 rounded-md font-medium">1 SMS</span>
-                  <span className="text-[10px] bg-white border border-border text-text2 px-1.5 py-0.5 rounded-md font-medium">1 min call</span>
                   <span className="text-[10px] bg-white border border-border text-text2 px-1.5 py-0.5 rounded-md font-medium">½ AI reply</span>
+                  <span className="text-[10px] text-text3">· calls unlimited</span>
                 </div>
               </div>
 
@@ -427,9 +427,9 @@ export default function PricingPage() {
                 ),
               },
               {
-                label: '1 minute of calling',
-                value: '1 credit',
-                detail: 'Inbound and outbound calls billed per minute. Partial minutes rounded up.',
+                label: 'Unlimited calling',
+                value: 'Free',
+                detail: 'Inbound and outbound calls are included at no extra credit cost on Growth and Enterprise plans.',
                 icon: (
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path d="M6.5 3C6.5 3 5 5 5 7.5C5 12.5 8.5 16 13.5 16C16 16 18 14.5 18 14.5L15.5 12L13.5 13.5C12 12.5 8.5 9 9.5 7.5L11 5.5L8.5 3H6.5Z" stroke="#D63B1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
