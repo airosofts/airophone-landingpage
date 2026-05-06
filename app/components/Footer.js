@@ -16,6 +16,7 @@ const COLS = [
     heading: 'Product',
     links: [
       { label: 'Pricing', href: '/pricing' },
+      { label: 'Referral Program', href: '/referral' },
       { label: 'Compare', href: '/compare' },
       { label: 'vs Quo', href: '/compare/quo' },
       { label: 'vs Google Voice', href: '/compare/google-voice' },

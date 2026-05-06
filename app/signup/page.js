@@ -1,5 +1,7 @@
 'use client'
 
+import { Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 function Logo({ size = 34 }) {
@@ -27,7 +29,14 @@ function CheckIcon() {
   )
 }
 
-export default function SignupPage() {
+function SignupContent() {
+  const searchParams = useSearchParams()
+  const ref = searchParams.get('ref') || ''
+  const refQuery = ref ? `?ref=${ref}` : ''
+
+  const emailHref = `https://app.airophone.com/signup${refQuery}`
+  const googleHref = `https://app.airophone.com/auth/callback${refQuery}`
+
   return (
     <div style={{
       minHeight: '100vh', display: 'flex', overflow: 'hidden',
@@ -147,7 +156,7 @@ export default function SignupPage() {
 
           {/* Continue with Google */}
           <a
-            href="https://app.airophone.com/auth/callback"
+            href={googleHref}
             style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
               width: '100%', height: 46,
@@ -171,7 +180,7 @@ export default function SignupPage() {
 
           {/* Continue with Email */}
           <a
-            href="https://app.airophone.com/signup"
+            href={emailHref}
             style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
               width: '100%', height: 46, marginTop: 12,
@@ -234,5 +243,13 @@ export default function SignupPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function SignupPage() {
+  return (
+    <Suspense fallback={null}>
+      <SignupContent />
+    </Suspense>
   )
 }
