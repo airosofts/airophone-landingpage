@@ -164,17 +164,7 @@ export default async function ReferralPage() {
                   Commission is credited automatically when your referred user activates a paid subscription. No manual tracking needed.
                 </p>
               </div>
-              <div className="shrink-0 flex flex-col items-start sm:items-end gap-2">
-                <p className="text-[12px] text-text3 font-mono uppercase tracking-widest">Paid via</p>
-                <div className="flex gap-2">
-                  {['PayPal', 'Bank Transfer'].map(m => (
-                    <span key={m} className="inline-flex items-center px-3 py-1.5 rounded-lg border border-border bg-bg text-[12.5px] text-text2 font-medium">
-                      {m}
-                    </span>
-                  ))}
-                </div>
               </div>
-            </div>
           </section>
         )}
 

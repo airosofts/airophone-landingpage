@@ -269,10 +269,10 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-14 gap-6">
             <div>
               <div className="font-mono text-[11px] text-red tracking-[0.12em] uppercase mb-3.5">Features</div>
-              <h2 className="text-[clamp(28px,3.2vw,44px)] font-semibold tracking-[-0.035em] leading-[1.1] text-text">Three tools.<br/>One smart app.</h2>
+              <h2 className="text-[clamp(28px,3.2vw,44px)] font-semibold tracking-[-0.035em] leading-[1.1] text-text">One platform.<br/>Built for everything.</h2>
             </div>
-            <p className="text-[15px] text-text2 leading-[1.65] max-w-[340px] font-light sm:text-right">
-              Everything a modern business needs to communicate at scale &mdash; without the enterprise price tag.
+            <p className="text-[15px] text-text2 leading-[1.65] max-w-[360px] font-light sm:text-right">
+              Calling, messaging, AI automation, and contact management — every tool your team needs, unified in a single workspace.
             </p>
           </div>
 
@@ -284,13 +284,13 @@ export default function LandingPage() {
                 icon:<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.66A2 2 0 012 3H5a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 17v-.08z"/></svg>,
               },
               {
-                num:'02', label:'SMS', name:'Bulk SMS',
-                desc:'Send thousands of personalized messages in seconds. Build contact lists, schedule campaigns, track open and reply rates, and manage opt-outs — all from one clean dashboard.',
+                num:'02', label:'SMS', name:'Bulk SMS Campaigns',
+                desc:'Send thousands of personalized messages in seconds. Build contact lists, schedule campaigns, track reply rates, and manage opt-outs — all from one clean dashboard.',
                 icon:<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 9h8M8 13h5"/></svg>,
               },
               {
-                num:'03', label:'AI', name:'AI Agent Replies',
-                desc:'Train a custom AI agent on your business data. It handles inbound messages 24/7 — answering FAQs, routing requests, booking appointments, and escalating when needed.',
+                num:'03', label:'AI', name:'AI Scenarios',
+                desc:'Build custom AI agents with your own instructions. They handle inbound replies 24/7 — answering questions, qualifying leads, booking appointments, and escalating when needed.',
                 icon:<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>,
               },
             ].map((f,i) => (

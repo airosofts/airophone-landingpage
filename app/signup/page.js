@@ -34,8 +34,9 @@ function SignupContent() {
   const ref = searchParams.get('ref') || ''
   const refQuery = ref ? `?ref=${ref}` : ''
 
-  const emailHref = `https://app.airophone.com/signup${refQuery}`
-  const googleHref = `https://app.airophone.com/auth/callback${refQuery}`
+  const base = ref ? `https://app.airophone.com/signup?ref=${ref}` : 'https://app.airophone.com/signup'
+  const emailHref = ref ? `${base}&method=email` : `${base}?method=email`
+  const googleHref = ref ? `${base}&method=google` : `${base}?method=google`
 
   return (
     <div style={{
