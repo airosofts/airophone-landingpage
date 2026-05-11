@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
-export const revalidate = 300 // refresh commission data every 5 min
+export const revalidate = 0 // always fetch fresh — reflects admin changes immediately
 
 export const metadata = {
   title: 'Referral Program — Earn cash for every referral | AiroPhone',
