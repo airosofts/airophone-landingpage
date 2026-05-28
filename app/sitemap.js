@@ -14,6 +14,7 @@ const ROUTES = [
   // Features
   { path: '/features/voip-calling',    changeFrequency: 'monthly', priority: 0.8 },
   { path: '/features/bulk-sms',        changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/features/ringless-voicemail', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/features/ai-scenarios',    changeFrequency: 'monthly', priority: 0.8 },
   { path: '/features/unified-inbox',   changeFrequency: 'monthly', priority: 0.8 },
   { path: '/features/phone-numbers',   changeFrequency: 'monthly', priority: 0.8 },

@@ -23,11 +23,12 @@ const COLS = [
   {
     heading: 'Features',
     links: [
-      { label: 'VoIP Calling',   href: '/features/voip-calling'   },
-      { label: 'Bulk SMS',       href: '/features/bulk-sms'       },
-      { label: 'AI Scenarios',   href: '/features/ai-scenarios'   },
-      { label: 'Unified Inbox',  href: '/features/unified-inbox'  },
-      { label: 'Phone Numbers',  href: '/features/phone-numbers'  },
+      { label: 'VoIP Calling',       href: '/features/voip-calling'      },
+      { label: 'Bulk SMS',           href: '/features/bulk-sms'          },
+      { label: 'Ringless Voicemail', href: '/features/ringless-voicemail' },
+      { label: 'AI Scenarios',       href: '/features/ai-scenarios'      },
+      { label: 'Unified Inbox',      href: '/features/unified-inbox'     },
+      { label: 'Phone Numbers',      href: '/features/phone-numbers'     },
     ],
   },
   {

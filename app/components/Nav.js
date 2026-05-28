@@ -17,6 +17,7 @@ function Logo({ size = 26 }) {
 const FEATURES = [
   { label: 'VoIP Calling', href: '/features/voip-calling', desc: 'Crystal-clear business calls' },
   { label: 'Bulk SMS', href: '/features/bulk-sms', desc: 'Send thousands of messages' },
+  { label: 'Ringless Voicemail', href: '/features/ringless-voicemail', desc: 'Drop voicemails without ringing' },
   { label: 'AI Scenarios', href: '/features/ai-scenarios', desc: 'Automated message handling' },
   { label: 'Unified Inbox', href: '/features/unified-inbox', desc: 'All conversations in one place' },
   { label: 'Phone Numbers', href: '/features/phone-numbers', desc: 'Get a number in 60 seconds' },
